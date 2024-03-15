@@ -1,19 +1,23 @@
 $(document).ready(function() {
     $(".container")
     .mouseenter(function() {
-        $(".card").stop().animate(
-            {
-                top: "-90px",
-            },
-            "slow"
-        );
+        requestAnimationFrame(function() {
+            $(".card").stop().animate(
+                {
+                    top: "-90px",
+                },
+                "slow"
+            );
+        });
     })
     .mouseleave(function() {
-        $(".card").stop().animate(
-            {
-                top: 0,
-            },
-            "slow"
-        );
+        requestAnimationFrame(function() {
+            $(".card").stop().animate(
+                {
+                    top: 0,
+                },
+                "slow"
+            );
+        });
     });
 });
